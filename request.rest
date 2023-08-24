@@ -1,0 +1,92 @@
+GET http://localhost:4002/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoid2FybG9yZC53YXJyaW9yIiwiaWF0IjoxNjgyOTUyNjA0LCJleHAiOjE2ODI5NTM1MDR9.Iqmm5By5v2gWkSIHDwYx5zYUSoO7f1BTNUvoUDkGfgE
+
+###
+POST http://localhost:4001/auth/signup
+Content-Type: application/json
+
+{
+    "firstname": "warlord",
+    "lastname": "warrior",
+    "role": "doctor",
+    "clientid": 1,
+    "designation": "B.A psychology",
+    "password": "password",
+    "email": "warlord@gmail.com",
+    "mobile": 9783654547,
+    "address": "otsi hyderabad"
+}
+
+###
+POST http://localhost:4001/auth/login
+Content-Type: application/json
+
+{
+    "username": "warlord.warrior",
+    "password": "password"
+}
+
+###
+GET http://localhost:4002/getRoutes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoid2FybG9yZC53YXJyaW9yIiwicm9sZSI6ImRvY3RvciIsImlhdCI6MTY4MzI2Mzg2NCwiZXhwIjoxNjgzMjY0NzY0fQ.tIG4fBVZynO51Ze6odi4QXgh4viLCsieWat1NVezRt8
+
+###
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+    "token": ""
+}
+
+###
+POST http://localhost:4002/checkup
+Content-Type: application/json
+
+{
+    "patientid": 2,
+    "doctorname": "topgun",
+    "reason": "coughing, cold, fever",
+    "disease": "malaria",
+    "nextcheck": "2023-05-02"
+}
+
+###
+GET http://localhost:4001/auth/roles
+
+###
+POST http://localhost:4001/auth/roles
+Content-Type: application/json
+
+{
+    username: "warlord"
+}
+
+### Creating Db --- Tables
+GET http://localhost:4000/createdb
+
+###
+GET http://localhost:4000/userstable
+
+###
+GET http://localhost:4000/patientstable
+
+###
+GET http://localhost:4000/roletable
+
+###
+GET http://localhost:4000/hospitaltable
+
+###
+GET http://localhost:4000/checkuptable
+
+###
+GET http://localhost:4003/getPatientHistory?patientid=2
+
+### 
+POST http://localhost:4001/auth/activity
+Content-Type: application/json
+
+{
+    "username": "warlord.warrior",
+    "isactive": false
+}

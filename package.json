@@ -1,0 +1,39 @@
+{
+  "name": "nquest",
+  "version": "1.0.0",
+  "description": "hospitalApp",
+  "main": "index.js",
+  "scripts": {
+    "devService": "nodemon server.js",
+    "authService": "nodemon authServer.js",
+    "tableService": "nodemon tableServer.js",
+    "reportsService": "nodemon reportsService.js",
+    "indexService": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChittojiMuraliSreeKrishna/nQuest.git"
+  },
+  "author": "murali.chittoji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChittojiMuraliSreeKrishna/nQuest/issues"
+  },
+  "homepage": "https://github.com/ChittojiMuraliSreeKrishna/nQuest#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.3.0",
+    "mongoose": "^7.0.5",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "depcheck": "^1.4.3",
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.22"
+  }
+}
